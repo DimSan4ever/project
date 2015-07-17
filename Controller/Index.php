@@ -1,9 +1,10 @@
 <?php
-class Controller_Index
+class Controller_Index 
 {
     public $view;
+
     public function indexAction()
    {
-        $this->view = 'Hi it is '.__METHOD__;
+        include SITE_PATH.'View'.DS.'Index'.DS.'index.phtml';   
    }
 }

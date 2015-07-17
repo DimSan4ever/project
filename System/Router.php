@@ -23,41 +23,45 @@ class System_Router
         // Файл доступен?
         if (is_readable($file) == false) {
             throw new Exception('404 error! Controller ' . '\'' . $controllerName . '\''. ' not found');
-        }       
+        }
+       
         // Подключаем файл
         include ($file);
    
         // Создаём экземпляр контроллера
         $class = 'Controller_' . ucfirst($controllerName);
        
+        $viewFolder = ucfirst($controllerName);
+      
         $controller = new $class();
         
         // Действие доступно?
         if (is_callable(array($controller, $action)) == false) {
             throw new Exception('404 error. Action ' . '\'' . $action . '\''. ' Not Found');
         }
-        $controller->args = $args;//    ????
-         
-        // Выполняем действие
-        //$controller->$action();
-     
-         call_user_func(array($controller, $action));
         
         /**
          * @var System_View $view
          */
         $view = $controller->view;
         
-        $viewFolder = ucfirst($controllerName);
+        $controller->args = $args;    
        
-        $actionName = substr($action, 0, -6);        
+        // Выполняем действие
+     
+        call_user_func(array($controller, $action));
+       
+        $actionName = substr($action, 0, -6);
         
         $layoutFileName = 'View' . DS . 'layout.phtml';
         $viewFileName = 'View' . DS . $viewFolder . DS . $actionName . '.phtml';
-       
-        include $layoutFileName;
-        include $viewFileName;        
-    }
+        $host_path='http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['SCRIPT_NAME']);
+                
+    include $layoutFileName;
+    include $viewFileName;
+    
+        }
+    
     
     private function _getController(&$file, &$controller, &$action, &$args)
     {
@@ -67,15 +71,16 @@ class System_Router
         $route = trim($route, '/\\');
         $parts = explode('/', $route);
       
-        // Находим правильный контроллер        
-        
+        // Находим правильный контроллер
+        $cmd_path = $this->_path;
         foreach ($parts as $part) {
             $part = ucfirst($part);
-            if(!$controller) {               
-                $file = trim($this->_path.$part, '/\\') . '.php';
+            if(!$controller) {
+                $cmd_path .= $part . DS;
                 $controller = array_shift($parts);
                 continue;
-            }          
+            }
+          
             // Находим файл
             if(!$action) {
                 $action = array_shift($parts);
@@ -93,7 +98,9 @@ class System_Router
         else {
             $action .= 'Action';
         }
-        
+       
+        $file = trim($cmd_path, '/\\') . '.php';
+       
         $args = $parts;
     }
 }

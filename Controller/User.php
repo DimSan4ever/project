@@ -1,14 +1,18 @@
 <?php
-class Controller_User 
+class Controller_User extends System_Controller
 {
-   public $view; 
-   
-public function profileAction()
-{
-    $this-> view =  $this->args;
-}
- public function indexAction()      
-{
- $this->view = 'Hi it is '.__METHOD__;
-}
+    public function profileAction()
+            {
+            $args=  $this->_getArguments();
+            $userId=$args['id'];
+            try{
+            $modelUser = Model_User::getById($userId);
+            $this->view->setParam('user', $modelUser);
+            }
+            catch (Exception $e){}
+            }
+    public function indexAction()
+            {
+        
+            }
 }

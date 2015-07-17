@@ -2,7 +2,7 @@
 <settings>
     <db>
         <host>127.0.0.1</host>
-        <dbname>test</dbname>
+        <dbname>shopdrive</dbname>
         <username>root</username>
         <password></password>
     </db>

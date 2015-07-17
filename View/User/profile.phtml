@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <h1><?php print_r($view);?></h1>
-    </body>
-</html>
+<?php $user=$view->getParam('user');?>
+<table align="center">
+    <tr>
+        <th></th>
+        <th><h2>Profile user</h2></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+          <div id="userInfo">
+              <div>
+              <label> Name : </label>
+              <span> <?php echo $user->login;?></span>
+              </div>
+              <div>
+              <label> Email : </label>
+              <span> <?php echo $user->email;?></span>
+              </div>
+          </div>  
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            <img alt="Avatar" src="<?php echo $host_path.'/img/'.$user->photo;?>"/> 
+        </td>
+    </tr>
+</table>
