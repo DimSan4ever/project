@@ -1,0 +1,18 @@
+#body
+{
+    text-align: center;
+    margin: auto;
+}
+.product
+{   
+    width: 250px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: 2px solid;
+    margin: 20px; 
+    float: left;   
+}
+#body img
+{  
+    height: 150px;
+}

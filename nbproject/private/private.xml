@@ -3,13 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/X:/home/localhost/www/project/System/Router.php</file>
-            <file>file:/X:/home/localhost/www/project/index.php</file>
-            <file>file:/X:/home/localhost/www/project/Controller/Index.php</file>
-            <file>file:/X:/home/localhost/www/project/View/layout.phtml</file>
-            <file>file:/X:/home/localhost/www/project/View/Index/index.phtml</file>
-            <file>file:/X:/home/localhost/www/project/System/Registry.php</file>
-            <file>file:/X:/home/localhost/www/project/config.xml</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/css/Company/portfolio.css</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/View/layout.phtml</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/View/Company/portfolio.phtml</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/Controller/Product.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/System/Registry.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/css/Company/about.css</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/Controller/Company.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/System/Router.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/js/authorize.js</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/Model/User.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/System/View.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/css/Company/contact.css</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/System/Exception.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/Controller/Authorize.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/System/Controller.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/View/Company/about.phtml</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/View/Product/index.phtml</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/css/User/profile.css</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/View/Company/contact.phtml</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/.htaccess</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/View/user/profile.phtml</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/Controller/User.php</file>
+            <file>file:/X:/home/localhost/www/Studyfrmwrk/css/layout.css</file>
         </group>
     </open-files>
 </project-private>

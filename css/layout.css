@@ -1,4 +1,54 @@
-body{
-    text-align: center;
-    background-image: url(../img/bacground.jpg);
+body
+{
+text-align: center; 
+background-image: url(../img/bacground.jpg);
+}
+h1
+{
+width: 500px;
+margin: auto;
+margin-top: 2%;
+border-radius: 10px;
+background-color:gainsboro;  
+}
+#error
+{
+width:200px; 
+margin:0 78%; 
+color:red;  
+}
+.userEnter
+{
+ width:300px; 
+ margin-left:70%;
+ background-color:gainsboro;  
+ border-radius: 10px;
+}
+
+#loginFormDiv
+{
+  color:white;
+  text-align:left;  
+  width:400px;
+  margin-left: 80%; 
+}
+#menu
+{
+width:650px;
+border-radius: 10px;
+background-color:gainsboro;
+margin: 0 auto;
+}
+#menu>a
+{
+font: 20px cursive;
+margin-left:20px;
+}
+#forContent
+{
+ width:80%;
+ margin: auto;
+ margin-top: 50px;
+ background-color:gainsboro; 
+ border-radius: 10px;
 }

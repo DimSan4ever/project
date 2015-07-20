@@ -13,7 +13,6 @@ abstract class System_Db_Table
     public function __construct()
     {
         $this->_connection = System_Registry::get('db');
-       
     }
     
     public function getById($id)
@@ -28,7 +27,7 @@ abstract class System_Db_Table
         
         return $result;
     }
-//    
+    
 //    public function getByCriteria($params)
 //    {
 //        $page   = 0;
@@ -80,13 +79,13 @@ abstract class System_Db_Table
 //        return $result;
 //    }
 //    
-//    public function getAll()
-//    {
-//        $sql    = 'select * from ' . $this->_name;
-//        $sth    = $this->_connection->prepare($sql);
-//        $sth->execute();
-//        
-//        $result = $sth->fetchAll(PDO::FETCH_OBJ);
-//        return $result;
-//    }        
+    public function getAll()
+    {
+        $sql    = 'select * from ' . $this->_name;
+        $sth    = $this->_connection->prepare($sql);
+        $sth->execute();
+        
+        $result = $sth->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }        
 }

@@ -1,7 +1,8 @@
 <?php
+
 class Controller_User extends System_Controller
 {
-    public function profileAction()
+   public function profileAction()
             {
             $args=  $this->_getArguments();
             $userId=$args['id'];
@@ -9,7 +10,8 @@ class Controller_User extends System_Controller
             $modelUser = Model_User::getById($userId);
             $this->view->setParam('user', $modelUser);
             }
-            catch (Exception $e){}
+            catch (Exception $e){
+            }
             }
     public function indexAction()
             {

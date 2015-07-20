@@ -1,13 +1,7 @@
 <?php $user=$view->getParam('user');?>
-<table align="center">
-    <tr>
-        <th></th>
-        <th><h2>Profile user</h2></th>
-        <th></th>
-    </tr>
-    <tr>
-        <td>
-          <div id="userInfo">
+<div id="body">
+<h2>Profile user</h2>
+         <div id="userInfo">
               <div>
               <label> Name : </label>
               <span> <?php echo $user->login;?></span>
@@ -17,12 +11,6 @@
               <span> <?php echo $user->email;?></span>
               </div>
           </div>  
-        </td>
-        <td>
-            
-        </td>
-        <td>
-            <img alt="Avatar" src="<?php echo $host_path.'/img/'.$user->photo;?>"/> 
-        </td>
-    </tr>
-</table>
+<img alt="Photo" src="<?php echo !empty($user->photo)?$host_path.'/img/'.$user->photo:$host_path.'/img/img.png';?>"/>
+</div>
+        

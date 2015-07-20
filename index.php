@@ -1,4 +1,5 @@
 <?php
+
 define('DS', DIRECTORY_SEPARATOR);
 $site_path = realpath(dirname(__FILE__) . DS) . DS;
 define('SITE_PATH', $site_path);
@@ -17,6 +18,7 @@ try {
 } catch (PDOException $e) {
     echo "Error!: " . $e->getMessage();
 }
+
 spl_autoload_register('loadClass');
 
 function loadClass($className)
@@ -41,6 +43,7 @@ try {
 catch(Exception $e) {
     echo $e->getMessage();
 }
+
 $router = new System_Router();
 
 try {

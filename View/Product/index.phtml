@@ -1,0 +1,16 @@
+<?php $products=$view->getParam('products');?>
+<h2>Продукты</h2>
+<div id="body">
+<?php for($i=0;$i<count($products);$i++):;?>
+    <div class="product">
+    <a href="#">
+        <img alt="<?php echo 'img-'.$products[$i]->name;?>" src="<?php echo file_exists(SITE_PATH.$img=('/img/Products/'.$products[$i]->img))?$host_path.$img:$host_path.'/img/Products/img.png';?>"><br/>
+    <?php echo $products[$i]->name;?>
+    </a><br/>  
+    <?php echo $products[$i]->description;?><br/>
+    цена: <?php echo $products[$i]->price;?>р.<br/>  
+    
+    </div>
+    <?php endfor;?>
+
+</div>

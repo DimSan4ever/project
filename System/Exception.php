@@ -7,3 +7,4 @@ class System_Exception extends Exception
     const INVALID_LOGIN     = 4;
     const NOT_FOUND         = 5;
 }
+

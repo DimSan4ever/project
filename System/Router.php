@@ -48,33 +48,34 @@ class System_Router
         $controller->args = $args;    
        
         // Выполняем действие
+        //$controller->$action();
      
         call_user_func(array($controller, $action));
-       
+        
         $actionName = substr($action, 0, -6);
         
         $layoutFileName = 'View' . DS . 'layout.phtml';
         $viewFileName = 'View' . DS . $viewFolder . DS . $actionName . '.phtml';
         $host_path='http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['SCRIPT_NAME']);
-                
-    include $layoutFileName;
-    include $viewFileName;
-    
-        }
-    
+        
+        //include $viewFileName;
+        include $layoutFileName;
+    }
     
     private function _getController(&$file, &$controller, &$action, &$args)
     {
         $route = (empty($_GET['route'])) ? 'index' : $_GET['route'];
-       
+        
         // Получаем раздельные части
         $route = trim($route, '/\\');
         $parts = explode('/', $route);
-      
-        // Находим правильный контроллер
+        
+         // Находим правильный контроллер
         $cmd_path = $this->_path;
         foreach ($parts as $part) {
+
             $part = ucfirst($part);
+       
             if(!$controller) {
                 $cmd_path .= $part . DS;
                 $controller = array_shift($parts);
